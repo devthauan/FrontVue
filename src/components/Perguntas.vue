@@ -48,7 +48,7 @@ export default {
   },
   methods:{
     iniciar(){
-      axios.get("http://localhost:4000/perguntas").then((response) => 
+      axios.get("https://formularioresponsivel.herokuapp.com/perguntas").then((response) => 
       {this.perguntas  = response.data})
     },
     proxima_pergunta(){
@@ -62,7 +62,7 @@ export default {
       }
     },    
     responder(){
-        this.axios.post("http://localhost:4000/respostas", {"respostas":JSON.stringify(this.respostas)})
+        this.axios.post("https://formularioresponsivel.herokuapp.com/respostas", {"respostas":JSON.stringify(this.respostas)})
         alert("Salvo com sucesso!")
     }
   }
